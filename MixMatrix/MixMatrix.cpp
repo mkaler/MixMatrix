@@ -46,7 +46,7 @@ int main()
 	int rows, cols;
 	startMes();//displays a message
 	rows = takeInputInt("Write the number of the rows(greater than 1): ");
-	cols = takeInputInt("Write the number of the coloumns(greater than 1): ");
+	cols = takeInputInt("Write the number of the coloumns (greater than 1): ");
 	system("cls");
 	startMes();
 	/*
