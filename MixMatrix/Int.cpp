@@ -22,7 +22,8 @@ void Int::setValue(int value)
 {
 	this->value = value;
 }
-int Int::getValue() {
+int Int::getValue()
+{
 	return this->value;
 }
 std::string Int::typeValue()

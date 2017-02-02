@@ -35,9 +35,3 @@ std::string String::toString()
 String::~String()
 {
 }
-
-/*String::String(const String & s) : Base(s)
-{
-	value = s.getValue;
-}
-*/

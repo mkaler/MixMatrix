@@ -29,7 +29,8 @@ float Float::getValue()
 	return this->value;
 }
 
-std::string Float::typeValue() {
+std::string Float::typeValue()
+{
 	return "float";//returns "float" as a string because the attribute of this class is a char variable
 }
 

@@ -51,7 +51,8 @@ PolymorphicMatrix::PolymorphicMatrix(int rows, int cols)
 	the string "message" gets displayed on the screen
 	returns the input given by the user in string format
 */
-std::string PolymorphicMatrix::takeInput(std::string message) {
+std::string PolymorphicMatrix::takeInput(std::string message)
+{
 	std::string temp;
 	std::cout << message <<": ";
 	getline(std::cin, temp);
@@ -75,7 +76,8 @@ void PolymorphicMatrix::setMatValue()
 
 	std::vector<Base*> tempArr;// to store a single row of the matrix
 
-	while(index < rows){
+	while(index < rows)
+	{
 		
 		while(tempArr.size() < (unsigned)cols)//ends when a coloumn has been completed
 		{
@@ -89,16 +91,19 @@ void PolymorphicMatrix::setMatValue()
 				an Object of the approriate derived class gets istantiated and added to the matrix
 				of the Base class.
 			*/
-			if (figureType<int>(input, in)) {
+			if (figureType<int>(input, in))
+			{
 				streamTemp >> in;
 				tempSin = new Int(in);
 			}
-			else if (figureType<float>(input, fl)) {
+			else if (figureType<float>(input, fl))
+			{
 				streamTemp >> fl;
 				tempSin = new Float(fl);
 			}
 			else
-				if (figureType<std::string>(input, st)) {
+				if (figureType<std::string>(input, st))
+				{
 					streamTemp >> st;
 					if (st.size() == 1)
 						tempSin = new Char(st.at(0));
@@ -143,10 +148,10 @@ prints all the values and the types of the values of the matrix
 void PolymorphicMatrix::print()
 {
 	std::cout << "\t";
-	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
 			std::cout << mat[i][j]->toString() << "(" << mat[i][j]->typeValue() << ")" <<"\t";
-		}
 		std::cout << std::endl << std::endl <<"\t";
 	}
 }
